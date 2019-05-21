@@ -13,8 +13,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @RunWith(SpringRestPactRunner.class)
 @Provider("user_service")
-//@PactFolder("../order-service/target/pacts")
-@PactBroker(host = "broker_app", port = "80", tags = {"latest", "DEV", "PROD"})
+@PactFolder("../order-service/target/pacts")
+//@PactBroker(host = "broker_app", port = "80", tags = {"latest", "DEV", "PROD"})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserServiceTest {
 
@@ -23,7 +23,7 @@ public class UserServiceTest {
 
     @State("User Paresh exists")
     public void noState() {
-        // Setup user paresh details in database for the test.
+        // Setup user paresh details in database for the test. Just sysout for the time being
         System.out.println("Setting up user Paresh in database");
     }
 }
